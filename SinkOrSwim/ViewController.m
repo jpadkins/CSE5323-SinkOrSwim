@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "TwitterViewController.h"
+#import "RecipeTableViewController.h"
+#import "ImagesCollectionViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +25,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)TwitterButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"TwitterSegue" sender:self];
+}
+
+- (IBAction)RecipeButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"RecipeSegue" sender:self];
+}
+
+- (IBAction)ImagesButton:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"ImagesSegue" sender:self];
 }
 
 @end

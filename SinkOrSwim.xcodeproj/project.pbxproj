@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ACA02251D7F84EC00175804 /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */; };
+		0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02271D7F857500175804 /* ImagesCollectionViewController.m */; };
+		0ACA022B1D7F859800175804 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA022A1D7F859800175804 /* TwitterViewController.m */; };
 		0AF1BFCB1D7F56F300908302 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFCA1D7F56F300908302 /* main.m */; };
 		0AF1BFCE1D7F56F300908302 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFCD1D7F56F300908302 /* AppDelegate.m */; };
 		0AF1BFD11D7F56F300908302 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFD01D7F56F300908302 /* ViewController.m */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
+		0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
+		0ACA02261D7F857500175804 /* ImagesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCollectionViewController.h; sourceTree = "<group>"; };
+		0ACA02271D7F857500175804 /* ImagesCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesCollectionViewController.m; sourceTree = "<group>"; };
+		0ACA02291D7F859800175804 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
+		0ACA022A1D7F859800175804 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
 		0AF1BFC61D7F56F300908302 /* SinkOrSwim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinkOrSwim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF1BFCA1D7F56F300908302 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AF1BFCC1D7F56F300908302 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +119,12 @@
 				0AF1BFD71D7F56F300908302 /* LaunchScreen.storyboard */,
 				0AF1BFDA1D7F56F300908302 /* Info.plist */,
 				0AF1BFC91D7F56F300908302 /* Supporting Files */,
+				0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */,
+				0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */,
+				0ACA02261D7F857500175804 /* ImagesCollectionViewController.h */,
+				0ACA02271D7F857500175804 /* ImagesCollectionViewController.m */,
+				0ACA02291D7F859800175804 /* TwitterViewController.h */,
+				0ACA022A1D7F859800175804 /* TwitterViewController.m */,
 			);
 			path = SinkOrSwim;
 			sourceTree = "<group>";
@@ -271,7 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF1BFD11D7F56F300908302 /* ViewController.m in Sources */,
+				0ACA02251D7F84EC00175804 /* RecipeTableViewController.m in Sources */,
 				0AF1BFCE1D7F56F300908302 /* AppDelegate.m in Sources */,
+				0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */,
+				0ACA022B1D7F859800175804 /* TwitterViewController.m in Sources */,
 				0AF1BFCB1D7F56F300908302 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +516,7 @@
 				0AF1BFF51D7F56F300908302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF1BFF61D7F56F300908302 /* Build configuration list for PBXNativeTarget "SinkOrSwimTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +525,7 @@
 				0AF1BFF81D7F56F300908302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF1BFF91D7F56F300908302 /* Build configuration list for PBXNativeTarget "SinkOrSwimUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +534,7 @@
 				0AF1BFFB1D7F56F300908302 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
