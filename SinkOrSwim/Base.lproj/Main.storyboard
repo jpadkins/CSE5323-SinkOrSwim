@@ -106,23 +106,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JN0-Hb-00H">
-                                <rect key="frame" x="253" y="289" width="94" height="21"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeTableViewCell" rowHeight="136" translatesAutoresizingMaskIntoConstraints="NO" id="hoE-T5-eo7" customClass="RecipeTableViewCell">
+                                <rect key="frame" x="22" y="160" width="558" height="90"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hoE-T5-eo7" id="LDj-Lj-PIS">
+                                    <rect key="frame" x="0.0" y="0.0" width="558" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9B-wP-BZr">
+                                            <rect key="frame" x="0.0" y="-1" width="90" height="90"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cf-QQ-wGo">
+                                            <rect key="frame" x="98" y="34" width="452" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxE-8u-fBG">
+                                <rect key="frame" x="270" y="62" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="JN0-Hb-00H" firstAttribute="centerX" secondItem="SKv-mF-1XY" secondAttribute="centerX" id="2pt-LR-g9V"/>
-                            <constraint firstItem="JN0-Hb-00H" firstAttribute="centerY" secondItem="SKv-mF-1XY" secondAttribute="centerY" id="oGV-mA-YbF"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm6-BO-EeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="327"/>
+            <point key="canvasLocation" x="911" y="400"/>
         </scene>
         <!--Images Collection View Controller-->
         <scene sceneID="LUp-cz-X3r">
