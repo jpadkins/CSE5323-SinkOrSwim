@@ -15,13 +15,14 @@
 
 @implementation ImagesCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"ImageCell";
 
 -(ImageModel*)imageModel{
     if(!_imageModel)
         _imageModel = [ImageModel sharedInstance];
     return _imageModel;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
