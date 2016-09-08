@@ -7,9 +7,10 @@
 //
 
 #import "ImagesCollectionViewController.h"
-
+#import "ImageCollectionViewCell.h"
+#import "ImageModel.h"
 @interface ImagesCollectionViewController ()
-
+@property(strong, nonatomic) ImageModel* imageModel;
 @end
 
 @implementation ImagesCollectionViewController
@@ -46,19 +47,19 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    return self.imageModel.imageNames.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    
+    cell.imageView.image = [self.imageModel getImageWithName:self.imageModel.imageNames[indexPath.row]];
     return cell;
 }
 
