@@ -18,6 +18,16 @@
     return _imageNames;
 }
 
++(ImageModel*) sharedInstance{
+    static ImageModel* _sharedInstance = nil;
+    static dispatch_once_t oncePredicate;
+    
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[ImageModel alloc]init];
+    });
+    return _sharedInstance;
+    
+}
 -(UIImage*) getImageWithName:(NSString *)name {
     
     UIImage* image = nil;

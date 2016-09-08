@@ -13,6 +13,7 @@
 
 @property(strong, nonatomic) NSArray* imageNames;
 
++(ImageModel*) sharedInstance;
 -(UIImage*)getImageWithName:(NSString*) name;
 
 @end

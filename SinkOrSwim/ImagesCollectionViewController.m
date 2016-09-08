@@ -17,6 +17,11 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
+-(ImageModel*)imageModel{
+    if(!_imageModel)
+        _imageModel = [ImageModel sharedInstance];
+    return _imageModel;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
