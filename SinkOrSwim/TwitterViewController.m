@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
+    TWTRUserTimelineDataSource *searchTimelineDataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"_HairForceOne" APIClient:client];
+    [self initWithDataSource:searchTimelineDataSource];
     // Do any additional setup after loading the view.
 }
 

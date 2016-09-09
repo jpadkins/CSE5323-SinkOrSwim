@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Fabric/Fabric.h"
+#import "TwitterKit/TwitterKit.h"
 
-@interface TwitterViewController : UIViewController
+@interface TwitterViewController : TWTRTimelineViewController
 
 @end
