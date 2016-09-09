@@ -30,7 +30,6 @@ static NSString * const reuseIdentifier = @"ImageCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ImageModel* imageModel = [ImageModel sharedInstance];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -59,19 +58,23 @@ static NSString * const reuseIdentifier = @"ImageCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return 2;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.imageModel.imageNames.count;
+    return self.imageModel.images.count / [self numberOfSectionsInCollectionView:self];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    cell.imageView.image = [self.imageModel getImageWithName:self.imageModel.imageNames[indexPath.row]];
+
+    cell.imageView.image = self.imageModel.images[(indexPath.section * 5) + (indexPath.row)];
+    
+    
+    
     return cell;
 }
 

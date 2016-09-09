@@ -26,7 +26,6 @@
     
     if(!_imageView)
         _imageView = [[UIImageView alloc] initWithImage: _image];
-//        _imageView = [[UIImageView alloc]initWithImage:[[ImageModel sharedInstance] getImageWithName:@"craig1" ]];
     return _imageView;
 }
 

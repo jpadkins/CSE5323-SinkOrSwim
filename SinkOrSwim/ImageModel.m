@@ -9,20 +9,15 @@
 #import "ImageModel.h"
 
 @implementation ImageModel
-@synthesize imageNames = _imageNames;
 
--(NSArray*)imageNames{
-                       
-    if(!_imageNames)
-        _imageNames = @[@"craig1", @"craig2", @"craig3"];
-    return _imageNames;
-    
-    
 
-}
--(NSArray*) images {
+//api request format gotten from:
+//https://dev.cognitive.microsoft.com/docs/services/56b43f0ccf5ff8098cef3808/operations/571fab09dbe2d933e891028f
+-(NSMutableArray*) images {
     if(!_images) {
-        NSString* path = @"https://api.cognitive.microsoft.com/bing/v5.0/images/search?entities=true&q=craig+federighi&count=20&offset=0&mkt=en-us&safeSearch=Strict";
+        
+        _images = [[NSMutableArray alloc] init];
+        NSString* path = @"https://api.cognitive.microsoft.com/bing/v5.0/images/search?entities=true&q=craig+federighi&count=10&offset=0&mkt=en-us&safeSearch=Strict";
         NSString* responseString = [self makeRestAPICall:path];
         NSArray *jsonObject = [NSJSONSerialization JSONObjectWithData:[responseString dataUsingEncoding:NSUTF8StringEncoding]
                                                               options:0 error:NULL];
@@ -37,6 +32,7 @@
             NSURL *url = [NSURL URLWithString:contentArray[i]];
             NSData *data = [NSData dataWithContentsOfURL:url];
             UIImage *img = [[UIImage alloc] initWithData:data];
+            [_images addObject:img];
         }
         
     }
@@ -60,6 +56,8 @@
     image = [UIImage imageNamed:name];
     return image;
 }
+//api call code taken from:
+//http://rajneesh071.blogspot.com/2013/07/how-to-make-rest-api-call-in-objective-c.html
 -(NSString*) makeRestAPICall : (NSString*) reqURLStr
 {
     NSMutableURLRequest* _request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:reqURLStr]];
