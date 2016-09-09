@@ -64,6 +64,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 // Setters & Getters
 
 - (bool)do_intense {
@@ -154,15 +155,12 @@
 }
 
 - (IBAction)TwitterButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"TwitterSegue" sender:self];
 }
 
 - (IBAction)RecipeButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"RecipeSegue" sender:self];
 }
 
 - (IBAction)ImagesButton:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"ImagesSegue" sender:self];
 }
 
 - (IBAction)FaceClick:(UIButton *)sender {
@@ -171,13 +169,13 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Secret Message Modal"
                                                                       message:@"You're a fast clicker!"
                                                                 preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *love = [UIAlertAction actionWithTitle:@"👍💯💯💯💯"
-                                                       style:UIAlertActionStyleDefault
-                                                     handler:^(UIAlertAction *action) {
-                                                         [alert dismissViewControllerAnimated:YES
-                                                                                   completion:nil];
-                                                     }];
-        [alert addAction:love];
+        UIAlertAction *alertDelegate = [UIAlertAction actionWithTitle:@"👍💯💯💯💯"
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction *action) {
+                                                                  [alert dismissViewControllerAnimated:YES
+                                                                                            completion:nil];
+                                                              }];
+        [alert addAction:alertDelegate];
         [self presentViewController:alert animated:YES completion:nil];
     }
 }

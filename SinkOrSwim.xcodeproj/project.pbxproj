@@ -76,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B97D7ED451D2E66845C3FB5 /* libPods-SinkOrSwim.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBAB731295AACF3281008AB /* libPods-SinkOrSwimTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C71765E04DEA88B8FF321E63 /* libPods-SinkOrSwimUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +106,8 @@
 				0AF1BFE21D7F56F300908302 /* SinkOrSwimTests */,
 				0AF1BFED1D7F56F300908302 /* SinkOrSwimUITests */,
 				0AF1BFC71D7F56F300908302 /* Products */,
+				689E36CE73EBEC417C9465D5 /* Pods */,
+				37C4106E3D1063379F3B74D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +175,29 @@
 			path = SinkOrSwimUITests;
 			sourceTree = "<group>";
 		};
+		37C4106E3D1063379F3B74D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18F9D705EFAE10B61F91D9E1 /* libPods-SinkOrSwim.a */,
+				49A64CE71B04D72E59E6588F /* libPods-SinkOrSwimTests.a */,
+				81CA562BF3A7B12A65C639D4 /* libPods-SinkOrSwimUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		689E36CE73EBEC417C9465D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E85BED9EFC3CB6A01C923B0 /* Pods-SinkOrSwim.debug.xcconfig */,
+				34A9A76AC5F99FDF4CDC4169 /* Pods-SinkOrSwim.release.xcconfig */,
+				E26F32F5D133E69CBAF1BEC8 /* Pods-SinkOrSwimTests.debug.xcconfig */,
+				F53884787980B6557C04F9BD /* Pods-SinkOrSwimTests.release.xcconfig */,
+				3DE05E84568398B3332C6027 /* Pods-SinkOrSwimUITests.debug.xcconfig */,
+				8A7C727AB22F599D62D787C2 /* Pods-SinkOrSwimUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,9 +205,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF1BFF31D7F56F300908302 /* Build configuration list for PBXNativeTarget "SinkOrSwim" */;
 			buildPhases = (
+				BEE573816D5A0A3E583E7ABD /* [CP] Check Pods Manifest.lock */,
 				0AF1BFC21D7F56F300908302 /* Sources */,
 				0AF1BFC31D7F56F300908302 /* Frameworks */,
 				0AF1BFC41D7F56F300908302 /* Resources */,
+				DD38CB283F59D908D52A47AD /* [CP] Embed Pods Frameworks */,
+				57474B569BFC26E83B0D0664 /* [CP] Copy Pods Resources */,
+				0A682DAF1D833AC20090D740 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -194,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF1BFF61D7F56F300908302 /* Build configuration list for PBXNativeTarget "SinkOrSwimTests" */;
 			buildPhases = (
+				0A84068D396A5D9EAAAEDF12 /* [CP] Check Pods Manifest.lock */,
 				0AF1BFDB1D7F56F300908302 /* Sources */,
 				0AF1BFDC1D7F56F300908302 /* Frameworks */,
 				0AF1BFDD1D7F56F300908302 /* Resources */,
+				CEC1243D7ACD23E28EC8F68C /* [CP] Embed Pods Frameworks */,
+				5C9C0E704E3CAF25063D88D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AF1BFF91D7F56F300908302 /* Build configuration list for PBXNativeTarget "SinkOrSwimUITests" */;
 			buildPhases = (
+				74A1488C86F16F43C1D070BC /* [CP] Check Pods Manifest.lock */,
 				0AF1BFE61D7F56F300908302 /* Sources */,
 				0AF1BFE71D7F56F300908302 /* Frameworks */,
 				0AF1BFE81D7F56F300908302 /* Resources */,
+				88895B8CB8F2FE3FB7276E94 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +331,142 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A682DAF1D833AC20090D740 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" a89cb9ae4724dafa0bd352dda69471d535f807f3 eb17fd4529e423b1ca176494e5e7efd71540ecf6120d7d86ac827b8e88e39c54";
+		};
+		0A84068D396A5D9EAAAEDF12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57474B569BFC26E83B0D0664 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinkOrSwim/Pods-SinkOrSwim-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C9C0E704E3CAF25063D88D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinkOrSwimTests/Pods-SinkOrSwimTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A1488C86F16F43C1D070BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88895B8CB8F2FE3FB7276E94 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinkOrSwimUITests/Pods-SinkOrSwimUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEE573816D5A0A3E583E7ABD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CEC1243D7ACD23E28EC8F68C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinkOrSwimTests/Pods-SinkOrSwimTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD38CB283F59D908D52A47AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SinkOrSwim/Pods-SinkOrSwim-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AF1BFC21D7F56F300908302 /* Sources */ = {
@@ -441,6 +614,7 @@
 		};
 		0AF1BFF41D7F56F300908302 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E85BED9EFC3CB6A01C923B0 /* Pods-SinkOrSwim.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -453,6 +627,7 @@
 		};
 		0AF1BFF51D7F56F300908302 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34A9A76AC5F99FDF4CDC4169 /* Pods-SinkOrSwim.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -465,6 +640,7 @@
 		};
 		0AF1BFF71D7F56F300908302 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26F32F5D133E69CBAF1BEC8 /* Pods-SinkOrSwimTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SinkOrSwimTests/Info.plist;
@@ -477,6 +653,7 @@
 		};
 		0AF1BFF81D7F56F300908302 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F53884787980B6557C04F9BD /* Pods-SinkOrSwimTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SinkOrSwimTests/Info.plist;
@@ -489,6 +666,7 @@
 		};
 		0AF1BFFA1D7F56F300908302 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE05E84568398B3332C6027 /* Pods-SinkOrSwimUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SinkOrSwimUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -500,6 +678,7 @@
 		};
 		0AF1BFFB1D7F56F300908302 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7C727AB22F599D62D787C2 /* Pods-SinkOrSwimUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = SinkOrSwimUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
