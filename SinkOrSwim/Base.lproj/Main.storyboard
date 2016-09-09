@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YDB-Bo-rfK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,29 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vps-GR-K4K">
-                                <rect key="frame" x="277" y="247" width="48" height="30"/>
-                                <state key="normal" title="Twitter"/>
-                                <connections>
-                                    <action selector="TwitterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCl-IA-xw3"/>
-                                    <segue destination="QrV-bv-cSv" kind="show" identifier="TwitterSegue" id="Kq6-qI-dGG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GX-V0-V9U">
-                                <rect key="frame" x="277" y="285" width="47" height="30"/>
-                                <state key="normal" title="Recipe"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GX-V0-V9U">
+                                <rect key="frame" x="223" y="250" width="155" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="2Bv-qz-hhL"/>
+                                </constraints>
+                                <state key="normal" title="Recipe" image="recipe">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="RecipeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxR-xV-ECq"/>
                                     <segue destination="yJv-yw-8MH" kind="show" identifier="RecipeSegue" id="9GP-gB-GFS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-2a-Y6k">
-                                <rect key="frame" x="512" y="28" width="33" height="30"/>
-                                <state key="normal" title="Face"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vps-GR-K4K">
+                                <rect key="frame" x="223" y="72" width="155" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="n2f-6c-gzL"/>
+                                </constraints>
+                                <state key="normal" title="Twitter" image="twitter">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="TwitterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCl-IA-xw3"/>
+                                    <segue destination="QrV-bv-cSv" kind="show" identifier="TwitterSegue" id="Kq6-qI-dGG"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-Yx-de1">
-                                <rect key="frame" x="275" y="323" width="50" height="30"/>
-                                <state key="normal" title="Images"/>
+                            <button opaque="NO" contentMode="TopLeft" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-2a-Y6k">
+                                <rect key="frame" x="-43" y="20" width="174" height="170"/>
+                                <state key="normal" title="Face" image="face">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="FaceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7d-Ep-QBD"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8FO-MP-uvG">
+                                <rect key="frame" x="20" y="549" width="51" height="31"/>
+                                <connections>
+                                    <action selector="IntenseSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="mQp-NM-xF4"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intense Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONR-Xv-XQT">
+                                <rect key="frame" x="77" y="554" width="125" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="XDw-fl-i76"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jQi-cU-Rxh">
+                                <rect key="frame" x="208" y="550" width="374" height="31"/>
+                                <connections>
+                                    <action selector="IntenseSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ncu-ne-Klk"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-Yx-de1">
+                                <rect key="frame" x="223" y="428" width="155" height="166"/>
+                                <state key="normal" title="Images" image="dreamy">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="ImagesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISp-lp-sZb"/>
                                     <segue destination="YMk-wg-of4" kind="show" identifier="ImagesSegue" id="N3p-IL-ZCe"/>
@@ -49,20 +87,38 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7GX-V0-V9U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4hU-2I-8EM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gGW-2a-Y6k" secondAttribute="trailing" constant="35" id="5Y8-kU-6HZ"/>
-                            <constraint firstItem="7GX-V0-V9U" firstAttribute="top" secondItem="vps-GR-K4K" secondAttribute="bottom" constant="8" id="8Iv-6P-I2r"/>
-                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Fuq-hA-EHD"/>
-                            <constraint firstItem="vps-GR-K4K" firstAttribute="trailing" secondItem="7GX-V0-V9U" secondAttribute="trailing" constant="1" id="WGs-NV-Q58"/>
-                            <constraint firstItem="GI8-Yx-de1" firstAttribute="top" secondItem="7GX-V0-V9U" secondAttribute="bottom" constant="8" id="XFC-NX-iWR"/>
-                            <constraint firstItem="7GX-V0-V9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmo-mA-BKY"/>
-                            <constraint firstItem="GI8-Yx-de1" firstAttribute="centerX" secondItem="7GX-V0-V9U" secondAttribute="centerX" id="xP7-mc-gu8"/>
+                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-43" id="0fy-sh-Gvh"/>
+                            <constraint firstItem="GI8-Yx-de1" firstAttribute="top" secondItem="7GX-V0-V9U" secondAttribute="bottom" constant="8" symbolic="YES" id="4UK-PV-ADC"/>
+                            <constraint firstAttribute="bottom" secondItem="8FO-MP-uvG" secondAttribute="bottom" constant="20" symbolic="YES" id="9Vd-UR-NEb"/>
+                            <constraint firstItem="GI8-Yx-de1" firstAttribute="trailing" secondItem="7GX-V0-V9U" secondAttribute="trailing" id="BZU-hT-0fH"/>
+                            <constraint firstItem="GI8-Yx-de1" firstAttribute="leading" secondItem="7GX-V0-V9U" secondAttribute="leading" id="C0n-LV-RLU"/>
+                            <constraint firstItem="ONR-Xv-XQT" firstAttribute="leading" secondItem="8FO-MP-uvG" secondAttribute="trailing" constant="8" symbolic="YES" id="IRu-Xy-sgh"/>
+                            <constraint firstItem="vps-GR-K4K" firstAttribute="leading" secondItem="7GX-V0-V9U" secondAttribute="leading" id="IYn-xi-oeC"/>
+                            <constraint firstItem="8FO-MP-uvG" firstAttribute="centerY" secondItem="ONR-Xv-XQT" secondAttribute="centerY" id="JkK-k4-1H0"/>
+                            <constraint firstItem="8FO-MP-uvG" firstAttribute="bottom" secondItem="jQi-cU-Rxh" secondAttribute="bottom" id="OQY-n2-lJw"/>
+                            <constraint firstItem="jQi-cU-Rxh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RPC-fa-y5l"/>
+                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="RmH-8P-Weq"/>
+                            <constraint firstItem="vps-GR-K4K" firstAttribute="trailing" secondItem="7GX-V0-V9U" secondAttribute="trailing" id="c4U-iS-bXk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ONR-Xv-XQT" secondAttribute="bottom" constant="25" id="g3K-hf-PJV"/>
+                            <constraint firstItem="7GX-V0-V9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="glr-li-rKB"/>
+                            <constraint firstItem="7GX-V0-V9U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="250" id="k6H-WW-7LL"/>
+                            <constraint firstItem="8FO-MP-uvG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lfH-Lb-5xF"/>
+                            <constraint firstItem="jQi-cU-Rxh" firstAttribute="leading" secondItem="ONR-Xv-XQT" secondAttribute="trailing" constant="8" symbolic="YES" id="sRb-rn-kH8"/>
+                            <constraint firstItem="ONR-Xv-XQT" firstAttribute="centerY" secondItem="jQi-cU-Rxh" secondAttribute="centerY" id="u8Y-Xv-ywY"/>
+                            <constraint firstItem="7GX-V0-V9U" firstAttribute="top" secondItem="vps-GR-K4K" secondAttribute="bottom" constant="8" symbolic="YES" id="uGE-pa-HPM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PtL-lm-CCQ"/>
+                    <connections>
+                        <outlet property="FederighiFace" destination="gGW-2a-Y6k" id="z4g-sr-n6L"/>
+                        <outlet property="FederighiPicturesButton" destination="GI8-Yx-de1" id="Gxr-U3-GRp"/>
+                        <outlet property="FederighiRecipeButton" destination="7GX-V0-V9U" id="0Z9-9y-joy"/>
+                        <outlet property="FederighiTwitterButton" destination="vps-GR-K4K" id="e56-oq-zNw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="327"/>
+            <point key="canvasLocation" x="976" y="327"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="tAS-tZ-S1e">
@@ -122,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm6-BO-EeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="327"/>
+            <point key="canvasLocation" x="1708" y="327"/>
         </scene>
         <!--Images Collection View Controller-->
         <scene sceneID="kKs-VL-ZkD">
@@ -194,5 +250,29 @@
             </objects>
             <point key="canvasLocation" x="914" y="1728"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uIg-hH-WgN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YDB-Bo-rfK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Tw-p1-yNt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7zE-TL-Bdo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9P-zd-mdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="327"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="dreamy" width="137" height="170"/>
+        <image name="face" width="170" height="170"/>
+        <image name="recipe" width="137" height="170"/>
+        <image name="twitter" width="137" height="170"/>
+    </resources>
 </document>

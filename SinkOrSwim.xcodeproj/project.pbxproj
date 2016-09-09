@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A573C3C1D82106C00529B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A573C3B1D82106C00529B50 /* Assets.xcassets */; };
 		0ACA02251D7F84EC00175804 /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */; };
 		0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02271D7F857500175804 /* ImagesCollectionViewController.m */; };
 		0ACA022B1D7F859800175804 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA022A1D7F859800175804 /* TwitterViewController.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A573C3B1D82106C00529B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
 		0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
 		0ACA02261D7F857500175804 /* ImagesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCollectionViewController.h; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9FB1949B1D8270D800DE1033 /* ImageViewController.m */,
 				0AF1BFD51D7F56F300908302 /* Assets.xcassets */,
 				0AF1BFDA1D7F56F300908302 /* Info.plist */,
+				0A573C3B1D82106C00529B50 /* Assets.xcassets */,
 				0AF1BFC91D7F56F300908302 /* Supporting Files */,
 				0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */,
 				0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */,
