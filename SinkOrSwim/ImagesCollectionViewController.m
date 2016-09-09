@@ -25,12 +25,13 @@ static NSString * const reuseIdentifier = @"ImageCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ImageModel* imageModel = [ImageModel sharedInstance];
     
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -65,6 +66,7 @@ static NSString * const reuseIdentifier = @"ImageCell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    NSLog(@"@", cell.imageView);
     cell.imageView.image = [self.imageModel getImageWithName:self.imageModel.imageNames[indexPath.row]];
     return cell;
 }

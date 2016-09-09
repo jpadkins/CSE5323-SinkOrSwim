@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DNJ-Lz-TJU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -43,7 +43,7 @@
                                 <state key="normal" title="Images"/>
                                 <connections>
                                     <action selector="ImagesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISp-lp-sZb"/>
-                                    <segue destination="YMk-wg-of4" kind="show" id="N3p-IL-ZCe"/>
+                                    <segue destination="YMk-wg-of4" kind="show" identifier="ImagesSegue" id="N3p-IL-ZCe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,14 +145,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="61" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AcO-bB-v2s">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcO-bB-v2s">
                                             <rect key="frame" x="-8" y="0.0" width="69" height="70"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="AcO-bB-v2s" secondAttribute="trailing" id="2M5-mW-SJO"/>
+                                    <constraint firstItem="AcO-bB-v2s" firstAttribute="leading" secondItem="AL9-8d-3b1" secondAttribute="leadingMargin" constant="-16" id="K4x-WZ-xY6"/>
+                                    <constraint firstAttribute="bottom" secondItem="AcO-bB-v2s" secondAttribute="bottom" id="YRK-Zh-fMz"/>
+                                    <constraint firstItem="AcO-bB-v2s" firstAttribute="top" secondItem="AL9-8d-3b1" secondAttribute="top" id="vSO-jO-beF"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="imageView" destination="AcO-bB-v2s" id="c82-ca-3wO"/>
+                                    <outlet property="imageView" destination="AcO-bB-v2s" id="cOC-gp-ijC"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
