@@ -149,6 +149,9 @@
                                 <segment title="Pasta"/>
                                 <segment title="Drinks"/>
                             </segments>
+                            <connections>
+                                <action selector="clickSegmentedController:" destination="yJv-yw-8MH" eventType="valueChanged" id="hli-NZ-Iuh"/>
+                            </connections>
                         </segmentedControl>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="nqc-r3-xRi">
@@ -170,12 +173,13 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="segmentedControl" destination="Lbt-Af-Tln" id="qer-fG-twX"/>
                         <segue destination="OGh-Jd-Nyj" kind="presentation" identifier="LemonadyFreshNSqueezySegue" id="73h-0Z-aDt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm6-BO-EeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="921" y="306"/>
+            <point key="canvasLocation" x="909" y="327"/>
         </scene>
         <!--Images Collection View Controller-->
         <scene sceneID="LUp-cz-X3r">
