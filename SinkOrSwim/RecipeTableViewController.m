@@ -20,14 +20,7 @@ NSArray *recipes;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    recipes = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", @"Lemonady Fresh N Squeezy", nil];
+    recipes = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", @"Lemonady", nil];
 }
 
 #pragma mark - Table view data source
