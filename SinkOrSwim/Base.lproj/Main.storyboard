@@ -28,7 +28,6 @@
                                 </state>
                                 <connections>
                                     <action selector="RecipeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxR-xV-ECq"/>
-                                    <segue destination="yJv-yw-8MH" kind="show" identifier="RecipeSegue" id="9GP-gB-GFS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vps-GR-K4K">
@@ -41,7 +40,7 @@
                                 </state>
                                 <connections>
                                     <action selector="TwitterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCl-IA-xw3"/>
-                                    <segue destination="QrV-bv-cSv" kind="show" identifier="TwitterSegue" id="Kq6-qI-dGG"/>
+                                    <segue destination="QrV-bv-cSv" kind="show" identifier="TwitterSegue" id="svh-pC-TfJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="TopLeft" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-2a-Y6k">
@@ -65,7 +64,7 @@
                                     <constraint firstAttribute="width" constant="125" id="XDw-fl-i76"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jQi-cU-Rxh">
@@ -81,7 +80,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ImagesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISp-lp-sZb"/>
-                                    <segue destination="YMk-wg-of4" kind="show" identifier="ImagesSegue" id="N3p-IL-ZCe"/>
+                                    <segue destination="YMk-wg-of4" kind="show" identifier="ImagesSegue" id="2oV-Ga-pGc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -114,11 +113,12 @@
                         <outlet property="FederighiPicturesButton" destination="GI8-Yx-de1" id="Gxr-U3-GRp"/>
                         <outlet property="FederighiRecipeButton" destination="7GX-V0-V9U" id="0Z9-9y-joy"/>
                         <outlet property="FederighiTwitterButton" destination="vps-GR-K4K" id="e56-oq-zNw"/>
+                        <segue destination="yJv-yw-8MH" kind="show" id="gLF-3y-L7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="327"/>
+            <point key="canvasLocation" x="970" y="267"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="tAS-tZ-S1e">
@@ -196,7 +196,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="AL9-8d-3b1" customClass="ImageCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="61" height="70"/>
+                                <rect key="frame" x="0.0" y="64" width="61" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="61" height="70"/>
@@ -261,12 +261,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7zE-TL-Bdo"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mgj-Nq-bpJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9P-zd-mdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="327"/>
+            <point key="canvasLocation" x="198" y="311"/>
         </scene>
     </scenes>
     <resources>

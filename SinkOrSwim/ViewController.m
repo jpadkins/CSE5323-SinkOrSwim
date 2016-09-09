@@ -54,7 +54,10 @@
                                    selector:@selector(faceShift:)
                                    userInfo:nil
                                     repeats:YES];
+    
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -178,5 +181,6 @@
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
+
 
 @end

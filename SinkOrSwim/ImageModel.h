@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ImageModel : NSObject
-
+@property(strong, nonatomic) NSArray* images;
 @property(strong, nonatomic) NSArray* imageNames;
 
 +(ImageModel*) sharedInstance;
