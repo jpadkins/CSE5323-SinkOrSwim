@@ -17,6 +17,8 @@
 
 @property (nonatomic) bool do_intense;
 @property (nonatomic) float intensity;
+@property (nonatomic) bool faceAlternate;
+@property (nonatomic) int faceClickCount;
 @property (weak, nonatomic) IBOutlet UIButton *FederighiFace;
 @property (weak, nonatomic) IBOutlet UIButton *FederighiTwitterButton;
 @property (weak, nonatomic) IBOutlet UIButton *FederighiRecipeButton;
@@ -36,6 +38,18 @@
     [NSTimer scheduledTimerWithTimeInterval:0.01
                                      target:self
                                    selector:@selector(getIntense:)
+                                   userInfo:nil
+                                    repeats:YES];
+    
+    CGRect frame = self.FederighiFace.frame;
+    frame.origin.x -= 50;
+    frame.origin.y -= 50;
+    [self.FederighiFace setFrame:frame];
+    self.faceRect = self.FederighiFace.frame;
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.01
+                                     target:self
+                                   selector:@selector(faceShift:)
                                    userInfo:nil
                                     repeats:YES];
 }
@@ -61,13 +75,20 @@
     return _intensity;
 }
 
+- (int)faceClickCount {
+    if (!_faceClickCount) {
+        _faceClickCount = 0;
+    }
+    return _faceClickCount;
+}
+
 // Methods
 
 - (void)getIntense:(NSTimer*)t {
     if (self.do_intense) {
         [UIView performWithoutAnimation:^{
             CGRect frame;
-            int intensityValue = (self.intensity*100);
+            int intensityValue = (self.intensity*100)/4;
             
             frame = self.twitterRect;
             frame.origin.x += -intensityValue + (rand() % (intensityValue*2 + 1));
@@ -87,11 +108,30 @@
     }
 }
 
+- (void)faceShift:(NSTimer*)t {
+    [UIView performWithoutAnimation:^{
+        CGRect frame = self.FederighiFace.frame;
+        if (self.faceAlternate) {
+            frame.origin.x += 1;
+            frame.origin.y += 1;
+            [self.FederighiFace.layer setFrame:frame];
+            if (frame.origin.x > self.faceRect.origin.x + 70) { self.faceAlternate = NO; }
+        } else {
+            frame.origin.x -= 1;
+            frame.origin.y -= 1;
+            [self.FederighiFace.layer setFrame:frame];
+            if (frame.origin.x < self.faceRect.origin.x - 500) {
+                self.faceClickCount = 0;
+                self.faceAlternate = YES;
+            }
+        }
+    }];
+}
+
 // Events
 
 - (IBAction)IntenseSlider:(UISlider *)sender {
     self.intensity = sender.value;
-    NSLog(@"The value is %f", self.intensity);
 }
 
 - (IBAction)IntenseSwitch:(UISwitch *)sender {
@@ -118,6 +158,17 @@
 
 - (IBAction)ImagesButton:(UIButton *)sender {
     [self performSegueWithIdentifier:@"ImagesSegue" sender:self];
+}
+
+- (IBAction)FaceClick:(UIButton *)sender {
+    self.faceClickCount += 1;
+    if (self.faceClickCount > 2) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Secret Message Modal"
+                                                                      message:@"You're a fast clicker!"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 @end

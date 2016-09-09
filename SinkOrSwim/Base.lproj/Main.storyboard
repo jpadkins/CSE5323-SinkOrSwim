@@ -47,6 +47,9 @@
                                 <state key="normal" title="Face" image="face">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="FaceClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7d-Ep-QBD"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8FO-MP-uvG">
                                 <rect key="frame" x="20" y="549" width="51" height="31"/>
