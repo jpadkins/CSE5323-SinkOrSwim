@@ -118,7 +118,7 @@
             frame.origin.x += 1;
             frame.origin.y += 1;
             [self.FederighiFace.layer setFrame:frame];
-            if (frame.origin.x > self.faceRect.origin.x + 70) { self.faceAlternate = NO; }
+            if (frame.origin.x > self.faceRect.origin.x + 50) { self.faceAlternate = NO; }
         } else {
             frame.origin.x -= 1;
             frame.origin.y -= 1;
