@@ -36,7 +36,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="n2f-6c-gzL"/>
                                 </constraints>
-                                <state key="normal" title="Twitter" image="twitter"/>
+                                <state key="normal" title="Twitter" image="twitter">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="TwitterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCl-IA-xw3"/>
                                     <segue destination="QrV-bv-cSv" kind="show" identifier="TwitterSegue" id="Kq6-qI-dGG"/>
@@ -74,7 +76,9 @@
                             </slider>
                             <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-Yx-de1">
                                 <rect key="frame" x="223" y="376" width="155" height="166"/>
-                                <state key="normal" title="Images" image="dreamy"/>
+                                <state key="normal" title="Images" image="dreamy">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="ImagesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ISp-lp-sZb"/>
                                     <segue destination="v7v-32-smL" kind="show" identifier="ImagesSegue" id="ESK-HK-GIo"/>

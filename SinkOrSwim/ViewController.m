@@ -34,7 +34,14 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    // start the intensity timer
+    // set the background
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor blackColor] CGColor],
+                       (id)[[UIColor whiteColor] CGColor], nil];
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    
+    // start the timers
     [NSTimer scheduledTimerWithTimeInterval:0.01
                                      target:self
                                    selector:@selector(getIntense:)
@@ -166,7 +173,13 @@
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Secret Message Modal"
                                                                       message:@"You're a fast clicker!"
                                                                 preferredStyle:UIAlertControllerStyleAlert];
-        
+        UIAlertAction *love = [UIAlertAction actionWithTitle:@"👍💯💯💯💯"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction *action) {
+                                                         [alert dismissViewControllerAnimated:YES
+                                                                                   completion:nil];
+                                                     }];
+        [alert addAction:love];
         [self presentViewController:alert animated:YES completion:nil];
     }
 }
