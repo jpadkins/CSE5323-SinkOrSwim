@@ -10,9 +10,12 @@
 
 @interface RecipeTableViewController ()
 
+
 @end
 
 @implementation RecipeTableViewController
+
+ NSArray *recipes;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +25,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    recipes = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", @"Lemonady Fresh and Squeezy", nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,22 +38,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [recipes count];
+
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"Mac N Cheezi.jpg"];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

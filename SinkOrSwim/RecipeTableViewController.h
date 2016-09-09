@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipeTableViewController : UITableViewController
+@interface RecipeTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+
 
 @end

@@ -18,7 +18,6 @@
 		0AF1BFD91D7F56F300908302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1BFD71D7F56F300908302 /* LaunchScreen.storyboard */; };
 		0AF1BFE41D7F56F300908302 /* SinkOrSwimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFE31D7F56F300908302 /* SinkOrSwimTests.m */; };
 		0AF1BFEF1D7F56F300908302 /* SinkOrSwimUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFEE1D7F56F300908302 /* SinkOrSwimUITests.m */; };
-		2D3BF7A91D81E5EA001D1EAD /* RecipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D3BF7A81D81E5EA001D1EAD /* RecipeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +60,6 @@
 		0AF1BFEA1D7F56F300908302 /* SinkOrSwimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinkOrSwimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF1BFEE1D7F56F300908302 /* SinkOrSwimUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SinkOrSwimUITests.m; sourceTree = "<group>"; };
 		0AF1BFF01D7F56F300908302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D3BF7A71D81E5EA001D1EAD /* RecipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewCell.h; sourceTree = "<group>"; };
-		2D3BF7A81D81E5EA001D1EAD /* RecipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +115,6 @@
 				0AF1BFCF1D7F56F300908302 /* ViewController.h */,
 				0AF1BFD01D7F56F300908302 /* ViewController.m */,
 				0AF1BFD21D7F56F300908302 /* Main.storyboard */,
-				2D3BF7A71D81E5EA001D1EAD /* RecipeTableViewCell.h */,
-				2D3BF7A81D81E5EA001D1EAD /* RecipeTableViewCell.m */,
 				0AF1BFD51D7F56F300908302 /* Assets.xcassets */,
 				0AF1BFD71D7F56F300908302 /* LaunchScreen.storyboard */,
 				0AF1BFDA1D7F56F300908302 /* Info.plist */,
@@ -295,7 +290,6 @@
 				0AF1BFCE1D7F56F300908302 /* AppDelegate.m in Sources */,
 				0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */,
 				0ACA022B1D7F859800175804 /* TwitterViewController.m in Sources */,
-				2D3BF7A91D81E5EA001D1EAD /* RecipeTableViewCell.m in Sources */,
 				0AF1BFCB1D7F56F300908302 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
