@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A573C3C1D82106C00529B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A573C3B1D82106C00529B50 /* Assets.xcassets */; };
 		0ACA02251D7F84EC00175804 /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */; };
 		0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02271D7F857500175804 /* ImagesCollectionViewController.m */; };
 		0ACA022B1D7F859800175804 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA022A1D7F859800175804 /* TwitterViewController.m */; };
@@ -14,7 +15,6 @@
 		0AF1BFCE1D7F56F300908302 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFCD1D7F56F300908302 /* AppDelegate.m */; };
 		0AF1BFD11D7F56F300908302 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFD01D7F56F300908302 /* ViewController.m */; };
 		0AF1BFD41D7F56F300908302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1BFD21D7F56F300908302 /* Main.storyboard */; };
-		0AF1BFD61D7F56F300908302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1BFD51D7F56F300908302 /* Assets.xcassets */; };
 		0AF1BFD91D7F56F300908302 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AF1BFD71D7F56F300908302 /* LaunchScreen.storyboard */; };
 		0AF1BFE41D7F56F300908302 /* SinkOrSwimTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFE31D7F56F300908302 /* SinkOrSwimTests.m */; };
 		0AF1BFEF1D7F56F300908302 /* SinkOrSwimUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1BFEE1D7F56F300908302 /* SinkOrSwimUITests.m */; };
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A573C3B1D82106C00529B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
 		0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
 		0ACA02261D7F857500175804 /* ImagesCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesCollectionViewController.h; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		0AF1BFCF1D7F56F300908302 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0AF1BFD01D7F56F300908302 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0AF1BFD31D7F56F300908302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0AF1BFD51D7F56F300908302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AF1BFD81D7F56F300908302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AF1BFDA1D7F56F300908302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AF1BFDF1D7F56F300908302 /* SinkOrSwimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinkOrSwimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,9 +115,9 @@
 				0AF1BFCF1D7F56F300908302 /* ViewController.h */,
 				0AF1BFD01D7F56F300908302 /* ViewController.m */,
 				0AF1BFD21D7F56F300908302 /* Main.storyboard */,
-				0AF1BFD51D7F56F300908302 /* Assets.xcassets */,
 				0AF1BFD71D7F56F300908302 /* LaunchScreen.storyboard */,
 				0AF1BFDA1D7F56F300908302 /* Info.plist */,
+				0A573C3B1D82106C00529B50 /* Assets.xcassets */,
 				0AF1BFC91D7F56F300908302 /* Supporting Files */,
 				0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */,
 				0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */,
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF1BFD91D7F56F300908302 /* LaunchScreen.storyboard in Resources */,
-				0AF1BFD61D7F56F300908302 /* Assets.xcassets in Resources */,
+				0A573C3C1D82106C00529B50 /* Assets.xcassets in Resources */,
 				0AF1BFD41D7F56F300908302 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
