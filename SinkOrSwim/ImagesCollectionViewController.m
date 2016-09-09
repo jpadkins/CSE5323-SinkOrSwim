@@ -9,9 +9,14 @@
 #import "ImagesCollectionViewController.h"
 #import "ImageCollectionViewCell.h"
 #import "ImageModel.h"
+#import "ImageViewController.h"
+
 @interface ImagesCollectionViewController ()
+
 @property(strong, nonatomic) ImageModel* imageModel;
+
 @end
+
 
 @implementation ImagesCollectionViewController
 
@@ -66,11 +71,16 @@ static NSString * const reuseIdentifier = @"ImageCell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
-    NSLog(@"@", cell.imageView);
     cell.imageView.image = [self.imageModel getImageWithName:self.imageModel.imageNames[indexPath.row]];
     return cell;
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UICollectionViewCell* cell = (UICollectionViewCell*) sender;
+    ImageViewController *ivc = [segue destinationViewController];
+//    ivc.image = ((Image*)cell.contentView).image;
+    ivc.image = ((ImageCollectionViewCell*) cell).imageView.image;
+}
 #pragma mark <UICollectionViewDelegate>
 
 /*

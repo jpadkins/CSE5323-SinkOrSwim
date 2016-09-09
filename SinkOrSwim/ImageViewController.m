@@ -9,7 +9,7 @@
 #import "ImageViewController.h"
 #import "ImageModel.h"
 
-@interface ImageViewController()
+@interface ImageViewController() <UIScrollViewDelegate>
 @property (strong, nonatomic) UIImageView* imageView;
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(strong, nonatomic) ImageModel *imageModel;
@@ -25,7 +25,8 @@
 -(UIImageView*) imageView{
     
     if(!_imageView)
-        _imageView = [[UIImageView alloc]initWithImage:[[ImageModel sharedInstance] getImageWithName:@"craig1" ]];
+        _imageView = [[UIImageView alloc] initWithImage: _image];
+//        _imageView = [[UIImageView alloc]initWithImage:[[ImageModel sharedInstance] getImageWithName:@"craig1" ]];
     return _imageView;
 }
 
@@ -33,5 +34,11 @@
     [super viewDidLoad];
     
     [self.scrollView addSubview:self.imageView];
+    self.scrollView.contentSize = self.imageView.image.size;
+    self.scrollView.minimumZoomScale = .1;
+    self.scrollView.delegate = self;
+}
+-(UIView*) viewForZoomingInScrollView:(UIScrollView*) scrollView{
+    return self.imageView;
 }
 @end
