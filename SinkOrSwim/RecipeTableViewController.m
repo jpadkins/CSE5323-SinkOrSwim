@@ -26,7 +26,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    recipes = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", @"Lemonady Fresh and Squeezy", nil];
+    recipes = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", @"Lemonady Fresh N Squeezy", nil];
 
 }
 
@@ -57,8 +57,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"Mac N Cheezi.jpg"];
+    
+    NSString *recipeName = [recipes objectAtIndex:indexPath.row];
+    cell.textLabel.text = recipeName;
+    cell.imageView.image = [UIImage imageNamed: recipeName];
+
     
     return cell;
 }
