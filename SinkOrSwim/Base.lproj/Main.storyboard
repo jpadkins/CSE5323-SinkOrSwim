@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YDB-Bo-rfK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GX-V0-V9U">
-                                <rect key="frame" x="223" y="198" width="155" height="170"/>
+                                <rect key="frame" x="223" y="250" width="155" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="2Bv-qz-hhL"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vps-GR-K4K">
-                                <rect key="frame" x="223" y="20" width="155" height="170"/>
+                                <rect key="frame" x="223" y="72" width="155" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="155" id="n2f-6c-gzL"/>
                                 </constraints>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="TopLeft" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-2a-Y6k">
-                                <rect key="frame" x="-28" y="-24" width="174" height="170"/>
+                                <rect key="frame" x="-43" y="20" width="174" height="170"/>
                                 <state key="normal" title="Face" image="face">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,7 +75,7 @@
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GI8-Yx-de1">
-                                <rect key="frame" x="223" y="376" width="155" height="166"/>
+                                <rect key="frame" x="223" y="428" width="155" height="166"/>
                                 <state key="normal" title="Images" image="dreamy">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
@@ -87,7 +87,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-28" id="0fy-sh-Gvh"/>
+                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-43" id="0fy-sh-Gvh"/>
                             <constraint firstItem="GI8-Yx-de1" firstAttribute="top" secondItem="7GX-V0-V9U" secondAttribute="bottom" constant="8" symbolic="YES" id="4UK-PV-ADC"/>
                             <constraint firstAttribute="bottom" secondItem="8FO-MP-uvG" secondAttribute="bottom" constant="20" symbolic="YES" id="9Vd-UR-NEb"/>
                             <constraint firstItem="GI8-Yx-de1" firstAttribute="trailing" secondItem="7GX-V0-V9U" secondAttribute="trailing" id="BZU-hT-0fH"/>
@@ -97,17 +97,18 @@
                             <constraint firstItem="8FO-MP-uvG" firstAttribute="centerY" secondItem="ONR-Xv-XQT" secondAttribute="centerY" id="JkK-k4-1H0"/>
                             <constraint firstItem="8FO-MP-uvG" firstAttribute="bottom" secondItem="jQi-cU-Rxh" secondAttribute="bottom" id="OQY-n2-lJw"/>
                             <constraint firstItem="jQi-cU-Rxh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RPC-fa-y5l"/>
-                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-24" id="RmH-8P-Weq"/>
+                            <constraint firstItem="gGW-2a-Y6k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="RmH-8P-Weq"/>
                             <constraint firstItem="vps-GR-K4K" firstAttribute="trailing" secondItem="7GX-V0-V9U" secondAttribute="trailing" id="c4U-iS-bXk"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ONR-Xv-XQT" secondAttribute="bottom" constant="25" id="g3K-hf-PJV"/>
                             <constraint firstItem="7GX-V0-V9U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="glr-li-rKB"/>
-                            <constraint firstItem="7GX-V0-V9U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="198" id="k6H-WW-7LL"/>
+                            <constraint firstItem="7GX-V0-V9U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="250" id="k6H-WW-7LL"/>
                             <constraint firstItem="8FO-MP-uvG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lfH-Lb-5xF"/>
                             <constraint firstItem="jQi-cU-Rxh" firstAttribute="leading" secondItem="ONR-Xv-XQT" secondAttribute="trailing" constant="8" symbolic="YES" id="sRb-rn-kH8"/>
                             <constraint firstItem="ONR-Xv-XQT" firstAttribute="centerY" secondItem="jQi-cU-Rxh" secondAttribute="centerY" id="u8Y-Xv-ywY"/>
                             <constraint firstItem="7GX-V0-V9U" firstAttribute="top" secondItem="vps-GR-K4K" secondAttribute="bottom" constant="8" symbolic="YES" id="uGE-pa-HPM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PtL-lm-CCQ"/>
                     <connections>
                         <outlet property="FederighiFace" destination="gGW-2a-Y6k" id="z4g-sr-n6L"/>
                         <outlet property="FederighiPicturesButton" destination="GI8-Yx-de1" id="Gxr-U3-GRp"/>
@@ -117,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="327"/>
+            <point key="canvasLocation" x="976" y="327"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="tAS-tZ-S1e">
@@ -177,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm6-BO-EeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="327"/>
+            <point key="canvasLocation" x="1708" y="327"/>
         </scene>
         <!--Images Collection View Controller-->
         <scene sceneID="LUp-cz-X3r">
@@ -208,6 +209,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcm-ds-Sbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="896" y="1092"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uIg-hH-WgN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YDB-Bo-rfK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Tw-p1-yNt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7zE-TL-Bdo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9P-zd-mdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="327"/>
         </scene>
     </scenes>
     <resources>

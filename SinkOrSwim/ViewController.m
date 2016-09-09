@@ -35,11 +35,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // set the background
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor blackColor] CGColor],
-                       (id)[[UIColor whiteColor] CGColor], nil];
-    [self.view.layer insertSublayer:gradient atIndex:0];
     
     // start the timers
     [NSTimer scheduledTimerWithTimeInterval:0.01
@@ -54,7 +49,7 @@
     [self.FederighiFace setFrame:frame];
     self.faceRect = self.FederighiFace.frame;
     
-    [NSTimer scheduledTimerWithTimeInterval:0.01
+    [NSTimer scheduledTimerWithTimeInterval:0.005
                                      target:self
                                    selector:@selector(faceShift:)
                                    userInfo:nil
