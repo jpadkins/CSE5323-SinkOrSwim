@@ -10,6 +10,7 @@
 		0A26F0041D8357810032359C /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A26EFFF1D8357810032359C /* ImageModel.m */; };
 		0A26F0051D8357810032359C /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A26F0011D8357810032359C /* ImageCollectionViewCell.m */; };
 		0A26F0061D8357810032359C /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A26F0031D8357810032359C /* ImageViewController.m */; };
+		0A26F0091D838F090032359C /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A26F0081D838F090032359C /* RecipeViewController.m */; };
 		0A573C3C1D82106C00529B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A573C3B1D82106C00529B50 /* Assets.xcassets */; };
 		0ACA02251D7F84EC00175804 /* RecipeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */; };
 		0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACA02271D7F857500175804 /* ImagesCollectionViewController.m */; };
@@ -50,6 +51,8 @@
 		0A26F0011D8357810032359C /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		0A26F0021D8357810032359C /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		0A26F0031D8357810032359C /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		0A26F0071D838F090032359C /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
+		0A26F0081D838F090032359C /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		0A573C3B1D82106C00529B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ACA02231D7F84EC00175804 /* RecipeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeTableViewController.h; sourceTree = "<group>"; };
 		0ACA02241D7F84EC00175804 /* RecipeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeTableViewController.m; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				0AF1BFCF1D7F56F300908302 /* ViewController.h */,
 				0AF1BFD01D7F56F300908302 /* ViewController.m */,
 				0AF1BFD21D7F56F300908302 /* Main.storyboard */,
+				0A26F0071D838F090032359C /* RecipeViewController.h */,
+				0A26F0081D838F090032359C /* RecipeViewController.m */,
 				0AF1BFD71D7F56F300908302 /* LaunchScreen.storyboard */,
 				0AF1BFDA1D7F56F300908302 /* Info.plist */,
 				0A573C3B1D82106C00529B50 /* Assets.xcassets */,
@@ -489,6 +494,7 @@
 				0ACA02251D7F84EC00175804 /* RecipeTableViewController.m in Sources */,
 				0A26F0041D8357810032359C /* ImageModel.m in Sources */,
 				0AF1BFCE1D7F56F300908302 /* AppDelegate.m in Sources */,
+				0A26F0091D838F090032359C /* RecipeViewController.m in Sources */,
 				0ACA02281D7F857500175804 /* ImagesCollectionViewController.m in Sources */,
 				0ACA022B1D7F859800175804 /* TwitterViewController.m in Sources */,
 				0A26F0061D8357810032359C /* ImageViewController.m in Sources */,
