@@ -7,6 +7,7 @@
 //
 
 #import "RecipeTableViewController.h"
+#import "RecipeViewController.h"
 
 @interface RecipeTableViewController ()
 
@@ -16,71 +17,16 @@
 
 @implementation RecipeTableViewController
 
-//NSArray *recipes;
-//
-//
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    recipes = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", @"Lemonady", nil];
-//}
-//
-//#pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return [recipes count];
-//
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    static NSString *simpleTableIdentifier = @"SimpleTableCell";
-//    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//    
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//    }
-//    
-//    
-//    NSString *recipeName = [recipes objectAtIndex:indexPath.row];
-//    cell.textLabel.text = recipeName;
-//    cell.imageView.image = [UIImage imageNamed: recipeName];
-//    
-//    return cell;
-//}
-//
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if(indexPath.row == 0){
-//    [self performSegueWithIdentifier:@"MacNCheeziSegue" sender:self];
-//    }
-//    else if(indexPath.row == 1){
-//    [self performSegueWithIdentifier:@"HotLinguiniSegue" sender:self];
-//    }
-//    else if(indexPath.row == 2){
-//    [self performSegueWithIdentifier:@"LemonadyFreshNSqueezySegue" sender:self];
-//    }
-//}
-//- (IBAction)clickSegmentedController:(id)sender {
-//    
-//}
+
 
 
 NSArray *pastas;
 NSArray *drinks;
+NSString * type;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     drinks = [NSArray arrayWithObjects:@"Lemonady", nil];
     pastas = [NSArray arrayWithObjects:@"Mac N Cheezi", @"Hot Linguini", nil];
 }
@@ -132,10 +78,12 @@ NSArray *drinks;
     {
 
         NSString *recipeName = [pastas objectAtIndex:indexPath.row];
+        type = recipeName;
         cell.textLabel.text = recipeName;
         cell.imageView.image = [UIImage imageNamed: recipeName];    }
     else if (_segmentedControl.selectedSegmentIndex==1) {
             NSString *recipeName = [drinks objectAtIndex:indexPath.row];
+            type = recipeName;
             cell.textLabel.text = recipeName;
             cell.imageView.image = [UIImage imageNamed: recipeName];
         }
@@ -145,14 +93,19 @@ NSArray *drinks;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.row == 0){
-    [self performSegueWithIdentifier:@"MacNCheeziSegue" sender:self];
+    [self performSegueWithIdentifier:@"RecipeViewSegue" sender:self];
     }
     else if(indexPath.row == 1){
-    [self performSegueWithIdentifier:@"HotLinguiniSegue" sender:self];
+    [self performSegueWithIdentifier:@"RecipeViewSegue" sender:self];
     }
-    else if(indexPath.row == 2){
-    [self performSegueWithIdentifier:@"LemonadyFreshNSqueezySegue" sender:self];
-    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:selectedIndexPath];
+    
+    RecipeViewController *rvc = [segue destinationViewController];
+    rvc.recipeType = cell.textLabel.text;
 }
 
 @end

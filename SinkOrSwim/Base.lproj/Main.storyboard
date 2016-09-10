@@ -31,7 +31,7 @@
                                 <state key="normal" title="Recipe"/>
                                 <connections>
                                     <action selector="RecipeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PxR-xV-ECq"/>
-                                    <segue destination="yJv-yw-8MH" kind="show" identifier="RecipeSegue" id="9GP-gB-GFS"/>
+                                    <segue destination="yJv-yw-8MH" kind="show" identifier="RecipeSegue" id="SBt-5J-djL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-2a-Y6k">
@@ -62,47 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="327"/>
-        </scene>
-        <!--MacNCheese View Controller-->
-        <scene sceneID="Fl2-71-iVB">
-            <objects>
-                <viewController title="MacNCheese View Controller" id="lNR-ug-tr7" customClass="MacNCheeseRecipeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XbE-QA-S9W"/>
-                        <viewControllerLayoutGuide type="bottom" id="1R8-zY-9cw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Tm-Gr-jT3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9q-UL-xsY">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                                </variation>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="E9q-UL-xsY"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="E9q-UL-xsY"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dww-Jr-Bft" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1615.5" y="420"/>
+            <point key="canvasLocation" x="214.5" y="279"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="tAS-tZ-S1e">
@@ -132,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDa-TZ-1kF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="-434"/>
+            <point key="canvasLocation" x="397.5" y="-426"/>
         </scene>
         <!--Recipe Table View Controller-->
         <scene sceneID="ivb-o3-k4Z">
@@ -162,8 +122,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="lNR-ug-tr7" kind="presentation" identifier="MacNCheeziSegue" id="lik-Du-iGe"/>
-                                    <segue destination="bqC-WP-SaN" kind="presentation" identifier="HotLinguiniSegue" trigger="accessoryAction" id="hYm-DX-6It"/>
+                                    <segue destination="tbV-4n-VuO" kind="show" identifier="RecipeViewSegue" action="showDetailViewController:sender:" id="gz8-zE-B2u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -174,12 +133,53 @@
                     </tableView>
                     <connections>
                         <outlet property="segmentedControl" destination="Lbt-Af-Tln" id="qer-fG-twX"/>
-                        <segue destination="OGh-Jd-Nyj" kind="presentation" identifier="LemonadyFreshNSqueezySegue" id="73h-0Z-aDt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qm6-BO-EeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="327"/>
+            <point key="canvasLocation" x="982.5" y="348"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="6BP-UF-1TD">
+            <objects>
+                <viewController id="tbV-4n-VuO" customClass="RecipeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YqR-wm-MR6"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVk-q9-T4N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pft-Et-0BP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-In-uCv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="34" width="400" height="366"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7Ng-In-uCv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7Ng-In-uCv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="7Ng-In-uCv" id="gLn-22-dLj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Cx-aK-fwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.5" y="1089"/>
         </scene>
         <!--Images Collection View Controller-->
         <scene sceneID="LUp-cz-X3r">
@@ -210,86 +210,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcm-ds-Sbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="255" y="1131"/>
-        </scene>
-        <!--LemonadeRecipeViewController-->
-        <scene sceneID="0Wc-es-WLF">
-            <objects>
-                <viewController title="LemonadeRecipeViewController" id="OGh-Jd-Nyj" customClass="LemonadeRecipe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6iR-jc-syP"/>
-                        <viewControllerLayoutGuide type="bottom" id="cWk-sd-ae5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VgJ-Cj-pOP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cB-bt-Qjh">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                                </variation>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="2cB-bt-Qjh"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="2cB-bt-Qjh"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mdv-4A-JBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1579.5" y="-265.5"/>
-        </scene>
-        <!--Linguini Recipe View Controller-->
-        <scene sceneID="7oi-B7-f4Z">
-            <objects>
-                <viewController id="bqC-WP-SaN" customClass="LinguiniRecipeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1aU-My-WXu"/>
-                        <viewControllerLayoutGuide type="bottom" id="9me-at-xfa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="i93-Fn-uzb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Kb-Mh-3vf">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                                </variation>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="5Kb-Mh-3vf"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="5Kb-Mh-3vf"/>
-                            </mask>
-                        </variation>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a7w-Gm-t4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="909" y="1131"/>
         </scene>
     </scenes>
 </document>

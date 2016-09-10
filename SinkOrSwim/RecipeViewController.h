@@ -1,5 +1,5 @@
 //
-//  LemonadeRecipe.h
+//  RecipeViewController.h
 //  SinkOrSwim
 //
 //  Created by Omar Roa on 9/9/16.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LemonadeRecipe : UIViewController
+@interface RecipeViewController : UIViewController
+
+@property (strong, atomic) NSString *recipeType;
 
 @end
