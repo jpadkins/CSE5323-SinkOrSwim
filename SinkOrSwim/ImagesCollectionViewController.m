@@ -7,14 +7,26 @@
 //
 
 #import "ImagesCollectionViewController.h"
+#import "ImageCollectionViewCell.h"
+#import "ImageModel.h"
+#import "ImageViewController.h"
 
 @interface ImagesCollectionViewController ()
 
+@property(strong, nonatomic) ImageModel* imageModel;
+
 @end
+
 
 @implementation ImagesCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"ImageCell";
+
+-(ImageModel*)imageModel{
+    if(!_imageModel)
+        _imageModel = [ImageModel sharedInstance];
+    return _imageModel;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +35,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -46,22 +58,32 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 0;
+    return 2;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    return self.imageModel.images.count / [self numberOfSectionsInCollectionView:self];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+
+    cell.imageView.image = self.imageModel.images[(indexPath.section * 5) + (indexPath.row)];
+    
+    
     
     return cell;
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UICollectionViewCell* cell = (UICollectionViewCell*) sender;
+    ImageViewController *ivc = [segue destinationViewController];
+//    ivc.image = ((Image*)cell.contentView).image;
+    ivc.image = ((ImageCollectionViewCell*) cell).imageView.image;
+}
 #pragma mark <UICollectionViewDelegate>
 
 /*
